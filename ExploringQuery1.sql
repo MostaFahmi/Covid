@@ -165,7 +165,7 @@ FROM CovidDeaths
 WHERE continent IS NOT NULL
 
 -- Use the Temp Table to Calculate Running Cases & Deaths to Population
-SELECT Continent,Country,Date,Population, Cumulative_Cases,Cumulative_Cases, 
+SELECT Continent,Country,Date,Population, Cumulative_Cases,Cumulative_Deaths, 
 (Cumulative_Cases/Population)*100 [Cases Ratio],
 (Cumulative_Deaths/Population)*100 [Deaths Ratio]
 FROM #CumulatedTable
